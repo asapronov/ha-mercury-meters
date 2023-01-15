@@ -1,5 +1,9 @@
 {
-    "hacs": "1.6.0",
-    "name": "mercury-meters",
-    "homeassistant": "2022.4.5"
+  "name": "Zigbee RS-485 Electricity Meters",
+  "render_readme": true,
+  "domain": "mercury-meters",
+  "documentation": "https://github.com/asapronov/ha-mercury-meters",
+  "issue_tracker": "https://github.com/asapronov/ha-mercury-meters/issues",
+  "hacs": "1.6.0",
+  "homeassistant": "2022.4.5"
 }
