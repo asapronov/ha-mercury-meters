@@ -1,6 +1,6 @@
 # Home Assistant Zigbee RS-485 Electricity Meters Integration
 
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://github.com/custom-components/hacs)
+[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/custom-components/hacs) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
 
 This is Home Assistant custom integration for obtaining the data from Electricity Meters with RS-485 port over Zigbee.
@@ -41,19 +41,47 @@ _*Автор разработки не несет ответственности
 ## Установка
 
 ### Через [HACS](https://hacs.xyz/) (рекомендуется)
-_Раздел в разработке_  
-Добавьте ссылку на этот репозиторий в HACS и Установите компонент.
+- Добавить ссылку на этот репозиторий в HACS
+- Установить компонент.
+- Настроить в соответствии с инструкцией ниже.
+- Перезапустить  Home-Assistant.
 
 ### Вручную (не рекомендуется)
 
-[[todo]]
+- Скопировать директорию `custom_components/mercury_meters` в `<config dir>/custom_components` директорию.
+- Настроить в соответствии с инструкцией ниже.
+- Перезапустить  Home-Assistant.
 
 ## Настройка
+Для настройки и дальнейшего использования необходимо добавить в файл `configuration.yaml` следующую информацию:
 
-[[todo]]
+```yaml
+# Example configuration.yaml entry
+
+sensor:
+  - platform: mercury_meters
+    serial_number: XXXXXXXX
+    meter_type: mercury200.02
+    resources:
+      - elecusageflowpulse
+      - elecusagecntpulse
+      - elecusageflowlow
+      - elecusagecntlow
+```
 
 ## Использование
 [[todo]]
+
+## Отладка
+
+Добавьте соответствующий параметр по примеру ниже в файл `configuration.yaml`:
+
+```yaml
+logger:
+  default: info
+  logs:
+    custom_components.mercury_meters: debug
+```
 
 ## Модем Zigbee-RS485
 [[todo]]

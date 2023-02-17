@@ -1,13 +1,14 @@
-
 {
-  "domain": "mercury-meters",
+  "domain": "electrometers",
   "name": "Zigbee RS-485 Electricity Meters",
   "config_flow": true,
   "documentation": "https://github.com/asapronov/ha-mercury-meters",
   "issue_tracker": "https://github.com/asapronov/ha-mercury-meters/issues",
   "hacs": "1.6.0",
-  "homeassistant": "2022.4.5"
+  "homeassistant": "2022.4.5",
+  "dependencies": ["mqtt"],
   "codeowners": [
     "@asapronov"
-  ]
+  ],
+  "version": "0.1.0"
 }
